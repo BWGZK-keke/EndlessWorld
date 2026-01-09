@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Think Before You Diffuse: LLM-Guided Physics-Aware Video Generation</title>
+  <title>Endless World: Real-Time 3D-Aware Long Video Generation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -189,10 +189,10 @@
 </head>
 <body>
 
-  <h1>Think Before You Diffuse: LLM-Guided Physics-Aware Video Generation</h1>
+  <h1>Endless World: Real-Time 3D-Aware Long Video Generation</h1>
 
   <div class="authors">
-    Ke Zhang, Cihan Xiao, Jiacong Xu, Yiqun Mei, Vishal M. Patel
+   Ke Zhang, Yiqun Mei, Jiacong Xu, Vishal M. Patel
   </div>
   <div class="affiliation">
     Johns Hopkins University
@@ -219,7 +219,7 @@
 
 <div class="description-box">
   <h2>Abstract</h2>
-Recent video diffusion models have demonstrated their great capability in generating visually-pleasing results, while synthesizing the correct physical effects in generated videos remains challenging. The complexity of real-world motions, interactions, and dynamics introduce great difficulties when learning physics from data. In this work, we propose DiffPhy, a generic framework that enables physically-correct and photo-realistic video generation by fine-tuning a pre-trained video diffusion model. Our method leverages large language models (LLMs) to explicitly reason a comprehensive physical context from the text prompt and use it to guide the generation. To incorporate physical context into the diffusion model, we leverage a Multimodal large language model (MLLM) as a supervisory signal and introduce a set of novel training objectives that jointly enforce physical correctness and semantic consistency with the input text. We also establish a high-quality physical video dataset containing diverse phyiscal-related actions and events to facilitate effective finetuning. Extensive experiments on public benchmarks, demonstrate that DiffPhy is able to produce state-of-the-art results across diverse physical scenarios. Our model and data will be released after the review process.
+Producing long, coherent video sequences with stable 3D structure remains a major challenge, particularly in streaming scenarios. Motivated by this, we introduce Endless World, a real-time framework for infinite, 3D-consistent video this http URL support infinite video generation, we introduce a conditional autoregressive training strategy that aligns newly generated content with existing video frames. This design preserves long-range dependencies while remaining computationally efficient, enabling real-time inference on a single GPU without additional training this http URL, our Endless World integrates global 3D-aware attention to provide continuous geometric guidance across time. Our 3D injection mechanism enforces physical plausibility and geometric consistency throughout extended sequences, addressing key challenges in long-horizon and dynamic scene this http URL experiments demonstrate that Endless World produces long, stable, and visually coherent videos, achieving competitive or superior performance to existing methods in both visual fidelity and spatial consistency. 
 </div>
 
 <!-- Method Pipeline -->
