@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Model weights (download from HuggingFace; do not commit)
+wan_models/
+checkpoints/
+*.pt
+*.pth
+*.safetensors
+!.gitkeep
+
+# Generated outputs
+outputs/
+videos/
+logs/
+runs/
+wandb/
+
+# Cache
+.cache/
+.pytest_cache/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Local data / experiment leftovers
+evaluation_results/
+input_images_*/
+nohup.out
+*.mp4
+!examples/video/*.mp4
+!assets/*.mp4
+!figures/*.mp4
+
+# Large training prompt file (>100 MB — host on HuggingFace / Drive, see prompts/README.md)
+prompts/vidprom_filtered_extended.txt
