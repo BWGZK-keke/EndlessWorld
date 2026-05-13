@@ -78,7 +78,7 @@ EndlessWorld stacks three pretrained components:
 | Wan2.1 T2V-1.3B (backbone + VAE + T5)    | [`Wan-AI/Wan2.1-T2V-1.3B`](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B) | `wan_models/Wan2.1-T2V-1.3B/` |
 | Wan2.1 T2V-14B (teacher / real-score)    | [`Wan-AI/Wan2.1-T2V-14B`](https://huggingface.co/Wan-AI/Wan2.1-T2V-14B)   | `wan_models/Wan2.1-T2V-14B/`  |
 | Self-Forcing DMD warm-start              |[ DMD    ](https://github.com/guandeh17/Self-Forcing)                | `checkpoints/self_forcing_dmd.pt` |
-| EndlessWorld 3D-fusion checkpoint        | provided in the EndlessWorld release                    | `checkpoints/model.pt`     |
+| EndlessWorld 3D-fusion checkpoint        | [ EndlessWorld](https://huggingface.co/BWGZK/EndlessWorld/tree/main)                    | `checkpoints/model.pt`     |
 | AnySplat (3D Gaussian encoder)           | [`lhjiang/anysplat`](https://huggingface.co/lhjiang/anysplat) — auto-downloaded | (HF cache) |
 
 Place the Wan weights under `wan_models/` so the structure looks like:
