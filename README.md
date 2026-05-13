@@ -12,19 +12,7 @@ conditional embeddings of every autoregressive chunk.
 
 ## Method at a glance
 
-```
-                ┌──────────────────┐
-   prompt ──►   │   text encoder   │
-                └────────┬─────────┘
-                         │ original_embed
-                         ▼
-   3D feature ──► [ CrossAttentionFusion ] ──► prompt_embeds ──► causal Wan generator
-        ▲                                                              │
-        │                                                              ▼
-        └─────── AnySplat( decoded RGB chunk ) ◄─── VAE.decode (latents)
-                                                  │
-                       autoregressive loop  ◄─────┘
-```
+![EndlessWorld pipeline](pipeline.png)
 
 * **Conditional autoregressive (self-forcing) training** — frames are denoised
   block-by-block with KV-cache, conditioning each new block on previously
