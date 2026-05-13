@@ -168,10 +168,11 @@ bash evaluate_vbench.sh
 If you find EndlessWorld useful in your work, please cite:
 
 ```bibtex
-@article{endlessworld2025,
-  title   = {Endless World: Real-Time 3D-Aware Long Video Generation},
-  journal = {arXiv preprint arXiv:2512.12430},
-  year    = {2025}
+@article{zhang2025endless,
+  title={Endless World: Real-Time 3D-Aware Long Video Generation},
+  author={Zhang, Ke and Mei, Yiqun and Xu, Jiacong and Patel, Vishal M},
+  journal={arXiv preprint arXiv:2512.12430},
+  year={2025}
 }
 ```
 
