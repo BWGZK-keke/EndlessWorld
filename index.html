@@ -99,6 +99,37 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
+    /* YouTube link button under the video */
+    .youtube-link-wrapper {
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    .youtube-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #cc0000;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .youtube-link:hover {
+      background-color: #a30000;
+      transform: translateY(-1px);
+    }
+
+    .youtube-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
     .footer {
       margin-top: 60px;
       font-size: 0.9em;
@@ -200,9 +231,8 @@
 
   <div class="links">
     <a href="https://arxiv.org/abs/2512.12430" target="_blank">📄 Paper (arXiv)</a>
-    <a href="#" onclick="alert('Code coming soon!')" style="background-color: #999999;">💻 Code (Coming Soon)</a>
-    <a href="#" onclick="alert('Model coming soon!')" style="background-color: #999999;">🧠 Model (Coming Soon)</a>
-    <a href="#" onclick="alert('Dataset coming soon!')" style="background-color: #999999;">📁 Dataset (Coming Soon)</a>
+    <a href="https://github.com/BWGZK-keke/EndlessWorld" target="_blank">💻 Code</a>
+    <a href="https://huggingface.co/BWGZK/EndlessWorld" target="_blank">🧠 Model</a>
   </div>
 
   <!-- <div class="gif-row">
@@ -215,6 +245,14 @@
 <video controls width="640" style="display: block; margin: 0 auto;">
   <source src="figures/Demo-small.mp4" type="video/mp4">
 </video>
+<div class="youtube-link-wrapper">
+  <a class="youtube-link" href="https://youtu.be/aGqxzeJqJBs" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>
+    Watch in high quality on YouTube
+  </a>
+</div>
 
 <div class="description-box">
   <h2>Abstract</h2>
@@ -235,40 +273,6 @@ Producing long, coherent video sequences with stable 3D structure remains a majo
   <p style="margin-top: 20px; font-size: 1.05rem; line-height: 1.7; color: #333;">
     <strong>Endless World</strong> features two core modules, 3D fusion and conditional auto-regressive video generation, which together enable the creation of 3D-consistent videos of unlimited length with stable and realistic visual quality.</p>
 </div>
-<!-- <div class="section-box">
-  <h2>Leaderboard on PhyGenBench</h2>
-  <p style="font-size: 1.05rem; margin-bottom: 16px;">
-    Quantitative comparison across four physical domains. Our method <strong>DiffPhy</strong> achieves the highest average performance, showcasing its superiority in generating physically-plausible videos. The compared results are borrowed directly from the PhyGenBench
-  </p>
-  <div style="overflow-x: auto;">
-    <table style="width: 100%; border-collapse: collapse; font-size: 1.05rem; text-align: center;">
-      <thead style="background-color: #007acc; color: #fff;">
-        <tr>
-          <th style="padding: 10px; border-radius: 8px 0 0 0;">Model</th>
-          <th style="padding: 10px;">Mechanics ↑</th>
-          <th style="padding: 10px;">Optics ↑</th>
-          <th style="padding: 10px;">Thermal ↑</th>
-          <th style="padding: 10px;">Material ↑</th>
-          <th style="padding: 10px; border-radius: 0 8px 0 0;">Average</th>
-        </tr>
-      </thead>
-      <tbody style="background-color: #fff;">
-        <tr><td style="padding: 10px;">CogVideoX-2B</td><td>0.38</td><td>0.43</td><td>0.34</td><td>0.39</td><td>0.37</td></tr>
-        <tr><td style="padding: 10px;">CogVideoX-5B</td><td>0.43</td><td>0.55</td><td>0.40</td><td>0.42</td><td>0.45</td></tr>
-        <tr><td style="padding: 10px;">Open-Sora V1.2</td><td>0.43</td><td>0.50</td><td>0.44</td><td>0.37</td><td>0.44</td></tr>
-        <tr><td style="padding: 10px;">Lavie</td><td>0.40</td><td>0.44</td><td>0.38</td><td>0.32</td><td>0.36</td></tr>
-        <tr><td style="padding: 10px;">Vchitect 2.0</td><td>0.41</td><td>0.56</td><td>0.44</td><td>0.37</td><td>0.45</td></tr>
-        <tr><td style="padding: 10px;">Pika</td><td>0.35</td><td>0.56</td><td>0.43</td><td>0.39</td><td>0.44</td></tr>
-        <tr><td style="padding: 10px;">Kling</td><td>0.45</td><td>0.58</td><td>0.50</td><td>0.40</td><td>0.49</td></tr>
-        <tr><td style="padding: 10px;">Wan</td><td>0.36</td><td>0.53</td><td>0.36</td><td>0.33</td><td>0.40</td></tr>
-        <tr style="background-color: #e8f4ff; font-weight: 600;">
-          <td style="padding: 10px;">DiffPhy (ours)</td><td>0.53</td><td>0.59</td><td>0.58</td><td>0.46</td><td>0.54</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
- -->
 
 <!-- BibTeX Citation -->
 <div class="section-box">
